@@ -1,5 +1,6 @@
 {
   "name": "todo-addon",
+  "version": "1.0.1",
   "scripts": {
     "dev:ff": "npm run ff",
     "dev:edge": "npm run edge",
