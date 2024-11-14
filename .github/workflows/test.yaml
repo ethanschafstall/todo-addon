@@ -27,9 +27,3 @@ jobs:
 
     - name: setup ftp
       run: sudo apt-get install lftp
-
-
-
-
-      
-        
