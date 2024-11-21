@@ -31,5 +31,5 @@ jobs:
       env:
         FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
         FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
-        F_HOST : ${{ secrets.F_HOST }}
+        FTP_HOST : ${{ secrets.FTP_HOST }}
       run: lftp -e "set ftp:ssl-allow no; mirror -R -I *.xpi web-ext-artifacts /site/wwwroot/addon_todo/esl; quit" -u $FTP_USERNAME, $FTP_PASSWORD $FTP_HOST
