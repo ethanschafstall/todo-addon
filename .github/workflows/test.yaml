@@ -26,3 +26,6 @@ jobs:
 
     - name: setup ftp
       run: sudo apt-get install lftp
+
+    - name: upload artifact
+      run: lftp -e "set ftp:ssl-allow no; mirror -R -I *.xpi web-ext-artifacts /site/wwwroot/addon_todo/esl; quit" -u ${{ secrets.FTP_USERNAME}},${{ secrets.FTP_PASSWORD}} ${{ secrets.FTP_HOST }}
